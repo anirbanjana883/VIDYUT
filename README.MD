@@ -1,8 +1,8 @@
-# ⚡ VIDYUT AI
+# ⚡ VIDYUT
 
 ### 🚀 Serverless Multi-Agent Ecosystem & Orchestration Platform
 
-Vidyut is a highly scalable, decoupled microservices AI platform that intelligently routes user intents to a fleet of specialized autonomous agents. By combining LangGraph stateful orchestration with a modern Serverless infrastructure (Upstash Redis, Supabase, MongoDB Atlas), Vidyut delivers complex AI capabilities—from RAG-powered document analysis and autonomous coding to real-time web search and multimedia generation.
+Vidyut is a **highly scalable**, **decoupled microservices** AI platform that intelligently routes user intents to a fleet of **specialized autonomous agents**. By combining **LangGraph** stateful orchestration with a modern **Serverless** infrastructure **(Upstash Redis, Supabase, MongoDB Atlas)**, Vidyut delivers complex AI capabilities—from **RAG-powered** document analysis and autonomous coding to real-time **web search** and **multimedia generation**.
 
 ## 🏛️ System Architecture
 
@@ -76,10 +76,10 @@ Every request initializes a LangGraph state object containing `{ prompt, file_ur
 An ultra-fast, low-latency LLM (via Groq) acts as the orchestration brain. It reads the user prompt, evaluates attached files, and outputs a structured JSON routing decision to determine the exact agent node to execute next.
 
 #### 🤖 The Agent Fleet (`agents/`)
-- 💻 `coding.agent.js`: Connects to OpenRouter (DeepSeek) for deep reasoning. Outputs are formatted specifically to inject into the frontend Monaco editor.
-- 👁️ `vision.agent.js`: Uses Gemini 2.5 Flash for multimodal processing. Analyzes charts, reads handwriting, and extracts data from Supabase-hosted image URLs.
-- 📄 `pdfRag.agent.js`: Vectorizes uploaded documents via Google Embeddings, stores them in Supabase pgvector, and performs cosine-similarity searches to answer questions directly from the document.
-- 🔍 `search.agent.js`: Binds the Tavily Search API as a tool to fetch real-time internet data, entirely eliminating knowledge-cutoff hallucinations.
+- 💻 `coding.agent.js`: Connects to **OpenRouter (DeepSeek)** for deep reasoning. Outputs are formatted specifically to inject into the frontend Monaco editor.
+- 👁️ `vision.agent.js`: Uses **Gemini 2.5 Flash** for multimodal processing. Analyzes charts, reads handwriting, and extracts data from Supabase-hosted image URLs.
+- 📄 `pdfRag.agent.js`: Vectorizes uploaded documents via **Google Embeddings**, stores them in **Supabase pgvector**, and performs **cosine-similarity** searches to answer questions directly from the document.
+- 🔍 `search.agent.js`: Binds the **Tavily Search API** as a tool to fetch real-time internet data, entirely eliminating knowledge-cutoff hallucinations.
 - 🗎 `ppt.agent.js` & `pdf.agent.js`: Compiles structured JSON outputs from the LLMs into highly formatted, downloadable .pptx or .pdf files.
 
 #### 💳 Credit Economy (`utils/deductCredits.js`)
