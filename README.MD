@@ -104,6 +104,7 @@ Before the graph executes, the system checks the requested agent's computational
 | Cache / Sessions | Upstash Redis | Serverless REST-based caching & auth state |
 | Blob / Vector DB | Supabase | File Storage + pgvector for RAG embeddings |
 | AI Providers | Groq, OpenRouter, Gemini | LLM APIs for specialized execution |
+| Payments | Razorpay | Billing, Webhooks, and Credit Top-ups |
 
 ### 🎨 Frontend (Lightweight UI)
 
