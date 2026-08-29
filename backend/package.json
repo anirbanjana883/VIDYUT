@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev:gateway": "cd gateway && npm run dev",
+    "dev:auth": "cd services/auth && npm run dev",
+    "dev:chat": "cd services/chat && npm run dev",
+    "dev:billing": "cd services/billing && npm run dev",
+    "dev:agent": "cd services/agent && npm run dev",
+    "dev": "concurrently --kill-others-on-fail --prefix \"[{name}]\" --names \"GATEWAY,AUTH,CHAT,BILLING,AGENT\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold,bgYellow.bold,bgCyan.bold\" \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:chat\" \"npm run dev:billing\" \"npm run dev:agent\""
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.38.3",
+    "concurrently": "^10.0.5",
+    "dotenv": "^17.4.2"
+  }
+}
